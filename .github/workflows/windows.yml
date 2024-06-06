@@ -11,10 +11,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Install Dagger CLI
-        run: Invoke-WebRequest -UseBasicParsing -Uri https://dl.dagger.io/dagger/install.ps1 -InstallPath C:\temp | Invoke-Expression
+        run: Invoke-WebRequest -UseBasicParsing -Uri https://dl.dagger.io/dagger/install.ps1 | Invoke-Expression
       - name: Check PWD
         run: pwd
       - name: Check Path
         run: $env:path
       - name: Verify Install
-        run: C:\temp\dagger\dagger.exe version
+        run: dagger\dagger.exe version
