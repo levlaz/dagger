@@ -1,0 +1,15 @@
+name: "Windows Smoke Tests"
+
+on:
+  push:
+    branches: [**]
+
+jobs:
+  test:
+    name: "Run Smoke Tests"
+    runs-on: windows-latest
+    steps:
+      - name: Install Dagger CLI
+        run: Invoke-WebRequest -UseBasicParsing -Uri https://dl.dagger.io/dagger/install.ps1 | Invoke-Expression
+      - name: Verify Install
+        run: dagger version
