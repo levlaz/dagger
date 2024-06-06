@@ -2,7 +2,8 @@ name: "Windows Smoke Tests"
 
 on:
   push:
-    branches: [**]
+    branches:
+      - '**'
 
 jobs:
   test:
