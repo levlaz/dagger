@@ -12,5 +12,7 @@ jobs:
     steps:
       - name: Install Dagger CLI
         run: Invoke-WebRequest -UseBasicParsing -Uri https://dl.dagger.io/dagger/install.ps1 | Invoke-Expression
+      - name: Check PWD
+        run: pwd
       - name: Verify Install
         run: dagger version
