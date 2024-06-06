@@ -21,4 +21,4 @@ jobs:
       - name: Check Tree
         run: tree
       - name: Verify Install
-        run: D:\a\dagger\dagger\dagger\dagger.exe version
+        run: C:\Users\runneradmin\dagger.exe version
