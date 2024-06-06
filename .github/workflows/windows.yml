@@ -14,7 +14,8 @@ jobs:
         run: Invoke-WebRequest -UseBasicParsing -Uri https://dl.dagger.io/dagger/install.ps1 | Invoke-Expression
       - name: Check PWD
         run: pwd
-      - name: Check Path
+      - name: Check Pathß
         run: $env:path
       - name: Verify Install
-        run: dagger\dagger.exe version
+        run: ~\dagger\dagger.exe version
+ß
