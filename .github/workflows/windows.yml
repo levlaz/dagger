@@ -15,4 +15,4 @@ jobs:
       - name: Check PWD
         run: pwd
       - name: Verify Install
-        run: dagger version
+        run: D:\a\dagger\dagger\dagger\dagger.exe version
