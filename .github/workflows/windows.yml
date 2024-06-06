@@ -16,6 +16,8 @@ jobs:
         run: pwd
       - name: Check Path
         run: $env:path
+      - name: Check Home
+        run: $env:HOMEPATH
       - name: Check Tree
         run: tree
       - name: Verify Install
