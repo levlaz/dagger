@@ -134,8 +134,9 @@ module.exports = {
       "collapsible": true,
       "collapsed": true,
       "items": [
+        "api/calling",
+        "api/extending",
         "api/types",
-        "api/internals",
         {
           "type": "category",
           "label": "API Documentation",
@@ -187,6 +188,7 @@ module.exports = {
           "label": "CLI Reference",
           "id": "reference/cli"
         },
+        "api/internals",
       ]
     },
     /*
