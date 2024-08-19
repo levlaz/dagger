@@ -39,27 +39,31 @@ Here's an example of it in action:
 
 ![Dagger Trace](/img/current_docs/quickstart/trace.gif)
 
-The **Traces** page of the Dagger Cloud dashboard lists runs you've triggered from your local development host or in CI. You should see your most recent Dagger pipeline run as the first entry in the list, as shown below:
+Dagger is aware of the context it runs on. The Dagger Cloud dashboard classifies Traces depending on whether you triggered a run from your local development host or from your CI environment.  You can select the appropriate view from the dashboard sidebar. Here's an example showing the list of most recent CI runs:
 
-![View Traces](/img/current_docs/features/cloud-view-traces.png)
+![Traces list](/img/current_docs/features/trace-list.png)
 
-Here's a quick summary of what you'll see for each Trace.
+Here's a quick summary of what you'll see for each Trace:
 
-|Field | Description |
-|---|---|
-|Status icon | Indication of the runs status: in progress, succeeded, or failed |
-|Command | The exact command used to invoke your pipeline |
-|Start | Run start time |
-|Duration | Run duration |
+- Repository name
+- Commit metadata, including comment and commit author
+- Indication of the run status: in progress, succeeded, or failed
+- The command used
+- The run start time
+- The run duration
 
-:::info
-The Traces feature does not yet include metadata for the user, branch, remote, or commit. We are working on adding this metadata.
+:::important
+All of the information listed above may not be available for a specific run; it differs depending on whether the Trace is for a local run or a CI run. When Dagger runs in a CI context like GitHub, GitLab, CircleCI, or Jenkins, additional Trace metadata is displayed based on the Git repository information available.
 :::
 
-You can drill down into the details of a specific run by clicking it. This directs you to a **Trace Details** page, as shown below:
+You can drill down into the details of a specific run by clicking it. This directs you to a Trace details page, as shown below:
 
-![View Trace Details](/img/current_docs/features/cloud-view-trace-details.png)
+![Trace details](/img/current_docs/features/trace-details.png)
 
-The **Trace Details** page includes detailed status and duration metadata about the pipeline steps. The tree view shows Dagger pipelines and steps within those pipelines. If there are any errors in the run, Dagger Cloud automatically brings you to the first error in the list. You see detailed logs and output of each step, making it easy for you to debug your pipelines and collaborate with your teammates.
+The Trace details page includes shows a list of Dagger Functions called in the run, together with detailed status and duration metadata for each. You can click any of the items in the list to see detailed logs and output for each function, as shown below:
 
-A Dagger Trace shows a detailed timeline for operations completed in a pipeline run. Dagger Cloud also applies unique IDs and icons for related operations, which are essential for debugging your pipeline when something does wrong.
+![Trace log](/img/current_docs/features/trace-log.png)
+
+If there are any errors, Dagger Cloud automatically brings you to the first error in the list.
+
+![Trace error](/img/current_docs/features/trace-error.png)
