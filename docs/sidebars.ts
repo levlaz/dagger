@@ -14,13 +14,13 @@ module.exports = {
         "id": "features/index",
       },
       "items": [
-        "features/programmable-builds",
+        "features/programmable-pipelines",
+        "features/reusable-modules",
         "features/caching",
         "features/debugging",
         "features/services",
         "features/secrets",
         "features/visualization",
-        "features/language-interoperability",
       ]
     },
     {
