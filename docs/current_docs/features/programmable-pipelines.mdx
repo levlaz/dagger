@@ -1,6 +1,8 @@
 ---
 slug: /features/programmable-pipelines
 ---
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # Programmable Pipelines
 
@@ -9,6 +11,23 @@ Dagger provides a specialized container engine for application delivery pipeline
 Dagger Functions are the fundamental unit of computing in Dagger. Dagger Functions let you encapsulate common project operations or workflows, such as "pull a container image", "copy a file", and "forward a TCP port", into portable, reusable program code with clear inputs and outputs.
 
 Here's an example of a Dagger Function that builds and containerizes a Go application:
+
+<Tabs groupId="language">
+<TabItem value="Go">
+```go file=./snippets/programmable-pipelines-1/go/main.go
+```
+</TabItem>
+<TabItem value="Python">
+```python file=./snippets/programmable-pipelines-1/python/main.py
+```
+</TabItem>
+<TabItem value="TypeScript">
+```typescript file=./snippets/programmable-pipelines-1/typescript/index.ts
+```
+</TabItem>
+</Tabs>
+
+See it in action:
 
 ![Build](/img/current_docs/features/build.gif)
 
@@ -21,6 +40,23 @@ Here's an example of calling the same Dagger Function again, but this time chain
 ![Build and publish](/img/current_docs/features/build-publish.gif)
 
 Here's the same Dagger Function again, modified to return the compiled binary as a just-in-time file. The file is then exported to the host via an additional, chained function call:
+
+<Tabs groupId="language">
+<TabItem value="Go">
+```go file=./snippets/programmable-pipelines-2/go/main.go
+```
+</TabItem>
+<TabItem value="Python">
+```python file=./snippets/programmable-pipelines-2/python/main.py
+```
+</TabItem>
+<TabItem value="TypeScript">
+```typescript file=./snippets/programmable-pipelines-2/typescript/index.ts
+```
+</TabItem>
+</Tabs>
+
+See it in action:
 
 ![Build and export](/img/current_docs/features/build-export.gif)
 
