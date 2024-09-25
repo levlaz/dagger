@@ -26,11 +26,44 @@ Some common scenarios for using services with Dagger Functions are:
 
 Here is an example of a Dagger Function that returns an HTTP service, which can then be accessed from the calling host:
 
+<Tabs groupId="language">
+<TabItem value="Go">
+```go file=./snippets/services-1/go/main.go
+```
+</TabItem>
+<TabItem value="Python">
+```python file=./snippets/services-1/python/main.py
+```
+</TabItem>
+<TabItem value="TypeScript">
+```typescript file=./snippets/services-1/typescript/index.ts
+```
+</TabItem>
+</Tabs>
+
+See it in action:
+
 ![Container to host networking](/img/current_docs/features/service-container.gif)
 
 This also works in the opposite direction: containers in Dagger Functions can communicate with services running on the host. Here's an example of how a pipeline running in a Dagger Function can access and query a MariaDB database service running on the host:
 
-![Host to container networking](/img/current_docs/features/service-host.gif)
+<Tabs groupId="language">
+<TabItem value="Go">
+```go file=./snippets/services-2/go/main.go
+```
+</TabItem>
+<TabItem value="Python">
+```python file=./snippets/services-2/python/main.py
+```
+</TabItem>
+<TabItem value="TypeScript">
+```typescript file=./snippets/services-2/typescript/index.ts
+```
+</TabItem>
+</Tabs>
 
+See it in action:
+
+![Host to container networking](/img/current_docs/features/service-host.gif)
 
 [Learn more about using services](../api/services.mdx).
