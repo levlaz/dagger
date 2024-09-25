@@ -1,7 +1,5 @@
-from typing import Annotated
-
 import dagger
-from dagger import Doc, dag, function, object_type
+from dagger import dag, function, object_type
 
 
 @object_type

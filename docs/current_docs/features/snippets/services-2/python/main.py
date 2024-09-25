@@ -1,15 +1,11 @@
-from typing import Annotated
-
 import dagger
-from dagger import Doc, dag, function, object_type
+from dagger import dag, function, object_type
 
 
 @object_type
 class MyModule:
     @function
-    async def user_list(
-        self, svc: dagger.Service
-    ) -> str:
+    async def user_list(self, svc: dagger.Service) -> str:
         return await (
             dag.container()
             .from_("mariadb:10.11.2")

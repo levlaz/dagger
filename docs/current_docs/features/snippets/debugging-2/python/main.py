@@ -7,7 +7,7 @@ class MyModule:
     @function
     async def foo(self) -> dagger.Container:
         return await (
-	          dag.container()
+            dag.container()
             .from_("alpine:latest")
             .terminal()
             .with_exec(["sh", "-c", "echo hello world > /foo"])

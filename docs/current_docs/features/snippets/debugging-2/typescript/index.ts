@@ -5,7 +5,8 @@ class MyModule {
 
   @func()
   async foo(): Container {
-		return await dag.container()
+		return await dag
+      .container()
       .from("alpine:latest")
       .terminal()
       .withExec(["sh", "-c", "echo hello world > /foo"])

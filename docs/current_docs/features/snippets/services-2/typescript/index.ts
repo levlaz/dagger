@@ -3,9 +3,7 @@ import { dag, object, func, Service } from "@dagger.io/dagger"
 @object()
 class MyModule {
   @func()
-  async userList(
-    svc: Service,
-  ): Promise<string> {
+  async userList(svc: Service): Promise<string> {
     return await dag
       .container()
       .from("mariadb:10.11.2")
